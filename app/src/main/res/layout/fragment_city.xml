@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/guelph_dt"
+        android:contentDescription="Image description"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/temperature"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="start"
+        android:text="Current Temperature:" />
+
+    <TextView
+        android:id="@+id/feelsLike"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="start"
+        android:text="Feels like:" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="start"
+        android:text="Humidity:" />
+
+    <TextView
+        android:id="@+id/lastVisitTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="100dp"
+        android:text="Last visited Guelph's weather on " />
+
+    <TextView
+        android:id="@+id/lastVisitTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="end"
+        android:text="Temperature: " />
+
+    <TextView
+        android:id="@+id/lastVisitFeelsLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="end"
+        android:text="Feels like: " />
+
+    <TextView
+        android:id="@+id/lastVisitHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="end"
+        android:text="Humidity: " />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="Back" />
+</LinearLayout>

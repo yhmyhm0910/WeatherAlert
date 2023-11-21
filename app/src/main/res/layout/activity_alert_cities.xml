@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AlertCitiesActivity"
+    android:background="@drawable/background_alert">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Weather Alert"
+            app:menu="@menu/menu_main"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:elevation="8dp"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:text="Any Weather Alerts in these cities?" />
+
+
+    <TextView
+        android:id="@+id/city_guelph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="Guelph: " />
+
+    <TextView
+        android:id="@+id/city_toronto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="Toronto: " />
+
+    <TextView
+        android:id="@+id/city_waterloo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="Waterloo: " />
+
+    <TextView
+        android:id="@+id/city_windsor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="Windsor: " />
+
+    <TextView
+        android:id="@+id/city_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="Prince Edward Island: " />
+
+    <Button
+        android:id="@+id/button_impacted_polygon"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Press to check the above cities" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_marginTop="10dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        tools:context=".AlertCitiesActivity" />
+
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+
+</LinearLayout>
+</ScrollView>

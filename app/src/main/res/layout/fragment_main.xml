@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:text="Select a city to check its weather." />
+
+    <RadioGroup
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start">
+
+        <RadioButton
+            android:id="@+id/city_guelph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="Guelph" />
+
+        <RadioButton
+            android:id="@+id/city_toronto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="Toronto" />
+
+        <RadioButton
+            android:id="@+id/city_waterloo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="Waterloo" />
+
+        <RadioButton
+            android:id="@+id/city_windsor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="Windsor" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/checkWeatherAlert"
+        android:layout_marginTop="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Weather Alert"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="@color/design_default_color_error"/>
+
+
+</LinearLayout>
