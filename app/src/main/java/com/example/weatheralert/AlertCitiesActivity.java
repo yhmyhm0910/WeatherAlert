@@ -58,6 +58,7 @@ public class AlertCitiesActivity extends AppCompatActivity implements OnMapReady
     private TextView textViewWindsor;
     private TextView textViewDemo;
     private Button impactedPolygonButton;
+    private TextView alertDetails;
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -80,6 +81,7 @@ public class AlertCitiesActivity extends AppCompatActivity implements OnMapReady
         textViewWaterloo = findViewById(R.id.city_waterloo);
         textViewWindsor = findViewById(R.id.city_windsor);
         textViewDemo = findViewById(R.id.city_demo);
+        alertDetails = findViewById(R.id.alertDetails);
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -149,7 +151,10 @@ public class AlertCitiesActivity extends AppCompatActivity implements OnMapReady
     }
 
     private class DownloadWebpageTask extends AsyncTask<String, Void, String[]> {
-
+        private String areaDesc;
+        private String event;
+        private String severity;
+        private String audience;
         @Override
         protected String[] doInBackground(String... urls) {
             try {
@@ -158,11 +163,11 @@ public class AlertCitiesActivity extends AppCompatActivity implements OnMapReady
                 AlertObject alertObject = processCapLinks(list);
 
                 // TODO: following are the attributes to display in the alter page
-                String areaDesc = alertObject.areaDesc;
-                String event = alertObject.event;
-                String severity = alertObject.severity;
+                areaDesc = alertObject.areaDesc;
+                event = alertObject.event;
+                severity = alertObject.severity;
                 String certainty = alertObject.certainty;
-                String audience = alertObject.audience;
+                audience = alertObject.audience;
                 List<String> lists = alertObject.capLinks;
 
                 // ensure not duplicate coordinates added
@@ -234,6 +239,9 @@ public class AlertCitiesActivity extends AppCompatActivity implements OnMapReady
                 @Override
                 public void onClick(View view) {
                     drawPolygon();
+                    if (areaDesc != null && event != null && severity != null && audience != null) {
+                        alertDetails.setText(areaDesc + " is having a " + severity + " " + event + " alert to " + audience);
+                    }
                 }
             });
         }
