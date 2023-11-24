@@ -81,7 +81,7 @@
         android:layout_marginLeft="10dp"
         android:textStyle="bold"
         android:textSize="15sp"
-        android:text="Prince Edward Island: " />
+        android:text="Deer Lake: " />
 
     <Button
         android:id="@+id/button_impacted_polygon"

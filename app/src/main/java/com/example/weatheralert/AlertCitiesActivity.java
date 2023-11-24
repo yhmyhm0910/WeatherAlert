@@ -213,7 +213,7 @@ public class AlertCitiesActivity extends AppCompatActivity implements OnMapReady
             LatLng toronto_coordinate = new LatLng(43, -79);
             LatLng waterloo_coordinate = new LatLng(43.463498172877344, -80.52218253067909);
             LatLng windsor_coordinate = new LatLng(42.31430903792992, -83.04133517299202);
-            LatLng demo_coordinate = new LatLng(46.32945571837806, -63.185310053397316);
+            LatLng demo_coordinate = new LatLng(49.18427353700019, -57.41590571926084);
 
             boolean isInGuelph = isInsidePolygon(latLngList, guelph_coordinate);
             boolean isInToronto = isInsidePolygon(latLngList, toronto_coordinate);
@@ -225,7 +225,7 @@ public class AlertCitiesActivity extends AppCompatActivity implements OnMapReady
             textViewToronto.setText("Toronto: " + isInToronto);
             textViewWaterloo.setText("Waterloo: " + isInWaterloo);
             textViewWindsor.setText("Windsor: " + isInWindsor);
-            textViewDemo.setText("Prince Edward Island: " + isInDemo);
+            textViewDemo.setText("Deer Lake: " + isInDemo);
 
             // check if the coordinates is inside the polygon or not
             LatLng coordinate1 = new LatLng(67.8000, -115.3000);
